@@ -12,6 +12,33 @@
   font-weight: bold;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: BPreplay, Helvetica, sans-serif;
+}
+
+.text-shadow {
+  text-shadow: -1px -1px 0 rgb(76, 29, 149), 1px -1px 0 rgb(76, 29, 149),
+    -1px 1px 0 rgb(76, 29, 149), 1px 1px 0 rgb(76, 29, 149);
+}
+
+.bg-gradient {
+  background: linear-gradient(
+    0deg,
+    rgba(228, 167, 235, 1) 0%,
+    rgba(122, 106, 200, 1) 100%
+  );
+}
+
+.bg-gradient-sm {
+  background: linear-gradient(
+    0deg,
+    rgba(228, 167, 235, 1) 0%,
+    rgba(122, 106, 200, 1) 100%
+  );
 }
