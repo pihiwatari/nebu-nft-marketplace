@@ -1,8 +1,7 @@
 import { resolve } from "path";
 import HTMLWebpackPlugin from "html-webpack-plugin";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
-// import HTMLInLineCSSWebpackPlugin from "html-inline-css-webpack-plugin";
-// import HTMLInLineScriptWebpackPlugin from "html-inline-script-webpack-plugin";
+import CopyWebpackPlugin from "copy-webpack-plugin";
 
 export default () => {
   return {
@@ -25,6 +24,10 @@ export default () => {
           test: /\.css$/i,
           use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader"],
         },
+        {
+          test: /\.png/,
+          type: "asset/resource",
+        },
       ],
     },
     plugins: [
@@ -35,6 +38,18 @@ export default () => {
       }),
       new MiniCssExtractPlugin({
         filename: "style.css",
+      }),
+      new CopyWebpackPlugin({
+        patterns: [
+          {
+            from: resolve(__dirname, "src/styles/fonts/"),
+            to: resolve(__dirname, "dist/assets/fonts"),
+          },
+          {
+            from: resolve(__dirname, "src/styles/images/"),
+            to: resolve(__dirname, "dist/assets/images"),
+          },
+        ],
       }),
     ],
     devServer: {
