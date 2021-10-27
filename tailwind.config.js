@@ -8,7 +8,7 @@ module.exports = {
     extend: {
       gridTemplateColumns: {
         //grid auto fill columns
-        auto: "repeat(auto-fill, minmax(400px, 1fr))",
+        auto: "repeat(auto-fit, minmax(280px, 1fr))",
       },
       height: {
         "screen-50": "50vh",

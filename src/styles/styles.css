@@ -22,11 +22,6 @@ body {
   font-family: BPreplay, Helvetica, sans-serif;
 }
 
-.text-shadow {
-  text-shadow: -1px -1px 0 rgb(76, 29, 149), 1px -1px 0 rgb(76, 29, 149),
-    -1px 1px 0 rgb(76, 29, 149), 1px 1px 0 rgb(76, 29, 149);
-}
-
 .bg-gradient {
   background: linear-gradient(
     0deg,
@@ -41,4 +36,25 @@ body {
     rgba(228, 167, 235, 1) 0%,
     rgba(122, 106, 200, 1) 100%
   );
+}
+
+.text-shadow {
+  text-shadow: -1px -1px 0 rgb(76, 29, 149), 1px -1px 0 rgb(76, 29, 149),
+    -1px 1px 0 rgb(76, 29, 149), 1px 1px 0 rgb(76, 29, 149);
+}
+
+.link-button {
+  @apply transform-gpu transition-all inline-block p-4 rounded-xl font-bold bg-purple-600 hover:bg-purple-800 hover:scale-105;
+}
+
+.card-outline {
+  @apply border-4 border-purple-900 border-opacity-50 rounded-3xl;
+}
+
+.card-image-outline {
+  @apply border-t-4 border-b-4 border-purple-900 border-opacity-50;
+}
+
+.card-detail-outline {
+  @apply border-4 border-purple-900 border-opacity-50;
 }

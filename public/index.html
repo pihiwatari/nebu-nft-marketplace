@@ -7,11 +7,37 @@
     <link rel="stylesheet" href="../src/styles/styles.css" />
     <title>Nebu - NFTs Marketplace</title>
   </head>
-  <body>
+  <body class="bg-gradient">
     <!-- NAVIGATION BAR -->
-    <header class="flex h-16 border-b-2 border-purple-900">
+    <header
+      class="
+        flex
+        justify-between
+        items-center
+        h-16
+        md:border-b-2 md:border-purple-900
+        bg-purple-100
+      "
+    >
+      <!-- logo image -->
+      <img
+        src="./assets/images/nebu_logo.png"
+        alt="Nebu logo"
+        class="h-full p-2 md:p-4"
+      />
+
+      <!-- desktop nav bar -->
       <nav
-        class="flex items-end h-full mx-auto text-xl font-bold text-purple-900"
+        class="
+          hidden
+          md:flex
+          items-end
+          h-full
+          mx-auto
+          text-xl
+          font-bold
+          text-purple-900
+        "
       >
         <ul class="flex justify-center align-bottom">
           <li class="border-2 border-b-0 border-purple-900 rounded-t-xl">
@@ -28,27 +54,35 @@
           </li>
         </ul>
       </nav>
+
+      <!-- hamburger menu -->
+      <div id="menu" class="md:invisible h-10 w-10 p-2">
+        <div class="h-0.5 w-full my-1 bg-purple-900"></div>
+        <div class="h-0.5 w-full my-1 bg-purple-900"></div>
+        <div class="h-0.5 w-full my-1 bg-purple-900"></div>
+      </div>
     </header>
     <!-- MAIN CONTENT -->
-    <main class="bg-gradient">
+    <main class="mx-auto px-8 max-w-6xl">
       <!-- HERO SECTION -->
-      <section class="hero flex justify-between mx-auto py-10 px-8">
-        <div class="flex-1 m-auto text-white text-shadow">
-          <h1 class="mb-8 text-8xl font-bold">Handmade drawn NFTs</h1>
-          <p class="text-2xl font-bold">
+      <section
+        class="
+          hero
+          flex flex-col-reverse
+          sm:flex-row
+          justify-between
+          mx-auto
+          py-10
+        "
+      >
+        <div class="flex-grow-1 m-auto text-white text-shadow">
+          <h1 class="mb-8 text-2xl sm:text-6xl lg:text-8xl font-bold">
+            No-code created NFTs
+          </h1>
+          <p class="text-xl sm:text-2xl">
             Get yours before this trends just passes away!
           </p>
-          <a
-            href="https://opensea.io/nebuniverse"
-            class="
-              inline-block
-              mt-16
-              p-4
-              rounded-xl
-              font-bold
-              bg-purple-700
-              hover:
-            "
+          <a href="https://opensea.io/nebuniverse" class="mt-16 link-button"
             >Get yours at Open Sea!</a
           >
         </div>
@@ -56,241 +90,77 @@
           <img
             src="./assets/images/nebu_hero.png"
             alt="Big nebu image"
-            class="h-screen-80 p-4"
+            class="md:w-full p-4 sm:p-10"
           />
         </figure>
       </section>
-      <!-- divider -->
-      <div
-        class="border-t-2 border-b-2 border-black border-opacity-30 h-36"
-      ></div>
+
       <!-- FEATURES SECTION -->
-      <section
-        class="grid grid-cols-auto justify-items-center gap-y-10 py-12 px-8"
-      >
-        <article
-          class="
-            flex flex-col
-            mx-5
-            border-4 border-purple-900 border-opacity-50
-            rounded-3xl
-          "
-        >
-          <figure
-            class="
-              mt-8
-              py-4
-              px-12
-              border-t-4 border-b-4 border-purple-900 border-opacity-50
-            "
-          >
+      <section class="grid grid-cols-auto gap-8 py-10">
+        <article class="flex flex-col mx-5 card-outline">
+          <figure class="mt-8 py-4 px-12 card-image-outline">
             <img
               src="./assets/images/nebu_card.png"
               alt="Canned ice cream with clear toppings and jelly"
               class="mx-auto"
             />
           </figure>
-          <div class="grid grid-cols-3 gap-x-3 p-5">
-            <div class="p-4 border-4 border-purple-900 border-opacity-50">
-              <p>Lorem ipsum,</p>
+          <div class="flex flex-col sm:flex-row p-4 text-white">
+            <div class="flex-1 mb-4 sm:mb-0 sm:mr-4 p-2 card-detail-outline">
+              Lorem ipsum dolor sit.
             </div>
-            <div
-              class="
-                col-span-2
-                p-4
-                border-4 border-purple-900 border-opacity-50
-              "
-            >
-              Right container
+            <div class="flex-1 p-2 card-detail-outline">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit,
+              nulla..
             </div>
           </div>
         </article>
-        <article
-          class="mx-5 border-4 border-purple-900 border-opacity-50 rounded-3xl"
-        >
-          <figure
-            class="
-              mt-8
-              py-4
-              px-12
-              border-t-4 border-b-4 border-purple-900 border-opacity-50
-            "
-          >
+        <article class="flex flex-col mx-5 card-outline">
+          <figure class="mt-8 py-4 px-12 card-image-outline">
             <img
               src="./assets/images/nebu_card.png"
               alt="Canned ice cream with clear toppings and jelly"
               class="mx-auto"
             />
           </figure>
-          <div class="grid grid-cols-3 gap-x-3 p-5">
-            <div class="p-4 border-4 border-purple-900 border-opacity-50">
-              Left container
+          <div class="flex flex-col sm:flex-row p-4 text-white">
+            <div class="flex-1 mb-4 sm:mb-0 sm:mr-4 p-2 card-detail-outline">
+              Lorem ipsum dolor sit.
             </div>
-            <div
-              class="
-                col-span-2
-                p-4
-                border-4 border-purple-900 border-opacity-50
-              "
-            >
-              Right container
+            <div class="flex-1 p-2 card-detail-outline">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit,
+              nulla..
             </div>
           </div>
         </article>
-        <article
-          class="mx-5 border-4 border-purple-900 border-opacity-50 rounded-3xl"
-        >
-          <figure
-            class="
-              mt-8
-              py-4
-              px-12
-              border-t-4 border-b-4 border-purple-900 border-opacity-50
-            "
-          >
+        <article class="flex flex-col mx-5 card-outline">
+          <figure class="mt-8 py-4 px-12 card-image-outline">
             <img
               src="./assets/images/nebu_card.png"
               alt="Canned ice cream with clear toppings and jelly"
               class="mx-auto"
             />
           </figure>
-          <div class="grid grid-cols-3 gap-x-3 p-5">
-            <div class="p-4 border-4 border-purple-900 border-opacity-50">
-              Left container
+          <div class="flex flex-col sm:flex-row p-4 text-white">
+            <div class="flex-1 mb-4 sm:mb-0 sm:mr-4 p-2 card-detail-outline">
+              Lorem ipsum dolor sit.
             </div>
-            <div
-              class="
-                col-span-2
-                p-4
-                border-4 border-purple-900 border-opacity-50
-              "
-            >
-              Right container
+            <div class="flex-1 p-2 card-detail-outline">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit,
+              nulla..
             </div>
           </div>
         </article>
       </section>
-      <!-- divider -->
-      <div
-        class="border-t-2 border-b-2 border-black border-opacity-30 h-36"
-      ></div>
-      <!-- MORE FEATURES SECTION -->
-      <section
-        class="grid grid-cols-auto justify-items-center gap-y-10 py-12 px-8"
-      >
-        <article
-          class="
-            flex flex-col
-            mx-5
-            border-4 border-purple-900 border-opacity-50
-            rounded-3xl
-          "
-        >
-          <figure
-            class="
-              mt-8
-              py-4
-              px-12
-              border-t-4 border-b-4 border-purple-900 border-opacity-50
-            "
-          >
-            <img
-              src="./assets/images/nebu_card.png"
-              alt="Canned ice cream with clear toppings and jelly"
-              class="mx-auto"
-            />
-          </figure>
-          <div class="grid grid-cols-3 gap-x-3 p-5">
-            <div class="p-4 border-4 border-purple-900 border-opacity-50">
-              <p>Lorem ipsum,</p>
-            </div>
-            <div
-              class="
-                col-span-2
-                p-4
-                border-4 border-purple-900 border-opacity-50
-              "
-            >
-              Right container
-            </div>
-          </div>
-        </article>
-        <article
-          class="mx-5 border-4 border-purple-900 border-opacity-50 rounded-3xl"
-        >
-          <figure
-            class="
-              mt-8
-              py-4
-              px-12
-              border-t-4 border-b-4 border-purple-900 border-opacity-50
-            "
-          >
-            <img
-              src="./assets/images/nebu_card.png"
-              alt="Canned ice cream with clear toppings and jelly"
-              class="mx-auto"
-            />
-          </figure>
-          <div class="grid grid-cols-3 gap-x-3 p-5">
-            <div class="p-4 border-4 border-purple-900 border-opacity-50">
-              Left container
-            </div>
-            <div
-              class="
-                col-span-2
-                p-4
-                border-4 border-purple-900 border-opacity-50
-              "
-            >
-              Right container
-            </div>
-          </div>
-        </article>
-        <article
-          class="mx-5 border-4 border-purple-900 border-opacity-50 rounded-3xl"
-        >
-          <figure
-            class="
-              mt-8
-              py-4
-              px-12
-              border-t-4 border-b-4 border-purple-900 border-opacity-50
-            "
-          >
-            <img
-              src="./assets/images/nebu_card.png"
-              alt="Canned ice cream with clear toppings and jelly"
-              class="mx-auto"
-            />
-          </figure>
-          <div class="grid grid-cols-3 gap-x-3 p-5">
-            <div class="p-4 border-4 border-purple-900 border-opacity-50">
-              Left container
-            </div>
-            <div
-              class="
-                col-span-2
-                p-4
-                border-4 border-purple-900 border-opacity-50
-              "
-            >
-              Right container
-            </div>
-          </div>
-        </article>
-      </section>
-      <!-- divider -->
-      <div
-        class="border-t-2 border-b-2 border-black border-opacity-30 h-36"
-      ></div>
+
       <!-- NEBU HIME ABOUT SECTION -->
-      <section class="hero flex justify-between mx-auto py-10 px-8">
-        <div class="w-1/2">
+      <section class="flex flex-col sm:flex-row justify-between mx-auto py-10">
+        <div class="md:w-1/3">
           <h2
             class="
               mb-8
-              text-6xl
+              text-4xl
+              sm:text-6xl
               font-bold
               leading-normal
               text-white text-shadow
@@ -305,38 +175,47 @@
           </p>
         </div>
         <!-- empty div for grid -->
-        <div class="w-1/2"></div>
+        <div class="md:w-2/3">
+          <img
+            src="./assets/images/nebu_hime.png"
+            alt="nebu hime"
+            class="md:max-w-md mx-auto p-16 sm:p-4"
+          />
+        </div>
       </section>
-      <!-- divider -->
-      <div
+
+      <!-- LAST SECTION -->
+      <section
         class="
-          relative
-          overflow-hidden
-          border-t-2 border-b-2 border-black border-opacity-30
-          h-36
+          flex flex-col
+          items-center
+          sm:flex-row sm:justify-center sm:h-screen-80
+          mx-auto
+          py-10
+          text-white
         "
       >
-        <img
-          src="./assets/images/nebu_hime.png"
-          alt="nebu hime"
-          class="absolute -bottom-4 right-0 w-1/2 max-w-xl p-8 pb-0"
-        />
-      </div>
-      <!-- LAST SECTION -->
-      <section class="hero flex justify-center h-screen-80 mx-auto py-10 px-8">
         <div
           class="
             flex-1
-            border-4 border-purple-900 border-opacity-50
-            rounded-3xl
+            w-full
+            h-full
+            mb-8
+            sm:mb-0 sm:mr-8
+            p-8
+            card-outline
+            rounded-md
           "
         >
-          Left container
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere libero
+          consectetur eum magni sequi! Unde expedita vero atque voluptas officia
+          officiis hic recusandae accusantium blanditiis et? Earum aspernatur et
+          doloremque alias sint ipsam pariatur voluptatibus placeat,
+          praesentium, quibusdam ea magni.
         </div>
-        <div
-          class="w-1/6 border-4 border-purple-900 border-opacity-50 rounded-xl"
-        >
-          Right container
+        <div class="h-full w-full sm:w-1/6 card-outline p-8 rounded-md">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel,
+          reiciendis?
         </div>
       </section>
     </main>
