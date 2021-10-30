@@ -12,6 +12,14 @@
   font-weight: bold;
 }
 
+:root {
+  --nebu-purple: rgba(122, 106, 200, 1);
+  --nebu-purple-darker: rgb(72, 62, 122);
+  --nebu-pink: rgba(228, 167, 235, 1);
+  --nebu-pink-darker: rgb(150, 110, 155);
+  --nebu-pink-darkest: rgb(46, 33, 48);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -22,39 +30,56 @@ body {
   font-family: BPreplay, Helvetica, sans-serif;
 }
 
+footer {
+  background-color: var(--nebu-pink-darkest);
+}
+
 .bg-gradient {
   background: linear-gradient(
     0deg,
-    rgba(228, 167, 235, 1) 0%,
-    rgba(122, 106, 200, 1) 100%
+    var(--nebu-pink) 0%,
+    var(--nebu-purple) 100%
   );
 }
 
 .bg-gradient-sm {
   background: linear-gradient(
     0deg,
-    rgba(228, 167, 235, 1) 0%,
-    rgba(122, 106, 200, 1) 100%
+    var(--nebu-pink) 0%,
+    var(--nebu-purple) 100%
   );
 }
 
 .text-shadow {
-  text-shadow: -1px -1px 0 rgb(76, 29, 149), 1px -1px 0 rgb(76, 29, 149),
-    -1px 1px 0 rgb(76, 29, 149), 1px 1px 0 rgb(76, 29, 149);
+  text-shadow: -1px -1px 0 var(--nebu-purple-darker),
+    1px -1px 0 var(--nebu-purple-darker), -1px 1px 0 var(--nebu-purple-darker),
+    1px 1px 0 var(--nebu-purple-darker);
 }
 
 .link-button {
-  @apply transform-gpu transition-all inline-block p-4 rounded-xl font-bold bg-purple-600 hover:bg-purple-800 hover:scale-105;
+  @apply transform-gpu transition-all inline-block p-4 rounded-lg font-bold hover:bg-purple-800 hover:scale-105;
+  background-color: var(--nebu-purple-darker);
+}
+.--pink {
+  @apply p-2 hover:bg-pink-800;
+  background-color: var(--nebu-pink-darker);
 }
 
 .card-outline {
-  @apply border-4 border-purple-900 border-opacity-50 rounded-3xl;
+  @apply border-4 border-opacity-50 rounded-3xl;
+  border-color: var(--nebu-purple-darker);
+}
+
+.--border-pink {
+  border-color: var(--nebu-pink-darker);
 }
 
 .card-image-outline {
-  @apply border-t-4 border-b-4 border-purple-900 border-opacity-50;
+  @apply border-t-4 border-b-4 border-opacity-50;
+  border-color: var(--nebu-purple-darker);
 }
 
 .card-detail-outline {
-  @apply border-4 border-purple-900 border-opacity-50;
+  @apply border-4 border-opacity-50;
+  border-color: var(--nebu-purple-darker);
 }
