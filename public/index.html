@@ -57,7 +57,9 @@
 
       <!-- mobile navigation bar -->
       <nav
+        id="mobile-menu"
         class="
+          hidden
           absolute
           z-10
           top-0
@@ -68,27 +70,26 @@
           items-center
           justify-center
           bg-purple-100 bg-opacity-95
-          md:hidden
+          lg:hidden
         "
       >
         <!-- hamburger menu closed -->
-        <div id="menu" class="md:invisible h-10 w-10 p-2">
+        <div id="menu" class="h-10 w-10">
           <div
             class="
-              h-0.5
+              h-1
               w-full
-              my-1
               bg-purple-900
               transform-gpu
               rotate-45
               origin-center
+              translate-y-1
             "
           ></div>
           <div
             class="
-              h-0.5
+              h-1
               w-full
-              my-1
               bg-purple-900
               transform-gpu
               -rotate-45
@@ -172,7 +173,7 @@
       </nav>
 
       <!-- hamburger menu icon -->
-      <div id="menu" class="md:invisible h-10 w-10 p-2">
+      <div id="menu-icon" class="lg:invisible h-10 w-10 p-2">
         <div class="h-0.5 w-full my-1 bg-purple-900"></div>
         <div class="h-0.5 w-full my-1 bg-purple-900"></div>
         <div class="h-0.5 w-full my-1 bg-purple-900"></div>
