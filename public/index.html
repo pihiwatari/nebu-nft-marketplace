@@ -55,8 +55,124 @@
         </ul>
       </nav>
 
-      <!-- hamburger menu -->
-      <div id="menu" class="lg:invisible h-10 w-10 p-2">
+      <!-- mobile navigation bar -->
+      <nav
+        class="
+          absolute
+          z-10
+          top-0
+          left-0
+          right-0
+          bottom-0
+          flex flex-col
+          items-center
+          justify-center
+          bg-purple-100 bg-opacity-95
+          md:hidden
+        "
+      >
+        <!-- hamburger menu closed -->
+        <div id="menu" class="md:invisible h-10 w-10 p-2">
+          <div
+            class="
+              h-0.5
+              w-full
+              my-1
+              bg-purple-900
+              transform-gpu
+              rotate-45
+              origin-center
+            "
+          ></div>
+          <div
+            class="
+              h-0.5
+              w-full
+              my-1
+              bg-purple-900
+              transform-gpu
+              -rotate-45
+              origin-center
+            "
+          ></div>
+        </div>
+        <ul
+          class="
+            flex flex-col
+            items-center
+            justify-center
+            w-screen
+            p-8
+            text-xl
+            font-bold
+            text-purple-900
+          "
+        >
+          <li class="w-full mt-4 mx-auto border-b-2 border-purple-900">
+            <a
+              href="#"
+              class="
+                block
+                mx-auto
+                text-center
+                focus:bg-purple-600 focus:text-white
+                transform-gpu
+                transition-all
+                duration-300
+              "
+              >MENU</a
+            >
+          </li>
+          <li class="w-full mt-4 mx-auto border-b-2 border-purple-900">
+            <a
+              href="#"
+              class="
+                block
+                mx-auto
+                text-center
+                focus:bg-purple-600 focus:text-white
+                transform-gpu
+                transition-all
+                duration-300
+              "
+              >ABOUT</a
+            >
+          </li>
+          <li class="w-full mt-4 mx-auto border-b-2 border-purple-900">
+            <a
+              href="#"
+              class="
+                block
+                mx-auto
+                text-center
+                focus:bg-purple-600 focus:text-white
+                transform-gpu
+                transition-all
+                duration-300
+              "
+              >NEBUNIVERSE</a
+            >
+          </li>
+          <li class="w-full mt-4 mx-auto border-b-2 border-purple-900">
+            <a
+              href="#"
+              class="
+                block
+                mx-auto
+                text-center
+                focus:bg-purple-600 focus:text-white
+                transform-gpu
+                transition-all
+                duration-300
+              "
+              >CONTACT</a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <!-- hamburger menu icon -->
+      <div id="menu" class="md:invisible h-10 w-10 p-2">
         <div class="h-0.5 w-full my-1 bg-purple-900"></div>
         <div class="h-0.5 w-full my-1 bg-purple-900"></div>
         <div class="h-0.5 w-full my-1 bg-purple-900"></div>
