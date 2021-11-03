@@ -9,6 +9,7 @@ export default () => {
     output: {
       path: resolve(__dirname, "dist"),
       filename: "main.js",
+      publicPath: "",
     },
     resolve: {
       extensions: [".js"],
@@ -35,6 +36,11 @@ export default () => {
         inject: true,
         filename: "index.html",
         template: resolve(__dirname, "./public/index.html"),
+      }),
+      new HTMLWebpackPlugin({
+        inject: true,
+        filename: "about.html",
+        template: resolve(__dirname, "./public/about.html"),
       }),
       new MiniCssExtractPlugin({
         filename: "style.css",
