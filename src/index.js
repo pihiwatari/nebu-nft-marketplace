@@ -5,15 +5,16 @@ import nebus from "./nebus.js";
 const $hamMenu = document.querySelector("#menu-icon");
 
 //mobile nav menu
-const $mobileMenu = document.querySelector("#mobile-menu");
+const $closemobileMenuIcon = document.querySelector("#close-menu");
+const $navigation = document.querySelector("#navigation");
 
 //close open menu listeners
 
 $hamMenu.addEventListener("click", () => {
-  $mobileMenu.classList.toggle("hidden");
+  $navigation.classList.toggle("hidden");
 });
-$mobileMenu.addEventListener("click", () => {
-  $mobileMenu.classList.toggle("hidden");
+$closemobileMenuIcon.addEventListener("click", () => {
+  $navigation.classList.toggle("hidden");
 });
 
 //feature section selector
