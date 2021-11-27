@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../src/styles/styles.css" />
+    <link rel="icon" href="./assets/images/nebu_card.png" />
     <title>Nebu - NFTs Marketplace</title>
   </head>
   <body class="flex flex-col">
@@ -194,6 +195,7 @@
                 mx-auto
                 p-4
                 sm:p-10
+                md:px-20
                 transform-gpu
                 translate-x-5
                 sm:translate-x-0
@@ -213,43 +215,46 @@
           </div>
         </section>
 
+        <!-- WHAT IS AN NFT SECTION -->
+
+        <section class="hero flex flex-col justify-between mx-auto py-10">
+          <h2
+            class="
+              mb-8
+              text-4xl
+              lg:text-6xl
+              font-bold
+              leading-normal
+              text-white text-shadow
+            "
+          >
+            What is an NFT?
+          </h2>
+          <div>
+            <p class="text-white mb-5 lg:text-2xl leading-loose">
+              NFT stands for "Non-Fungible Token", which mean that each NFT is
+              unique and cannot be replace, they are digital assets secured
+              using the same technology of cryptocurrencies. All NFT are purely
+              digital, and they can take the form of images, music, videos, a
+              picture. They can also be tied to physical assets and make you own
+              something real.
+            </p>
+            <p class="text-white mb-5 lg:text-2xl leading-loose">
+              Using NFTs open new ways for creatives and designers to protect,
+              share and sell their work. Imagine if you create a brand or
+              interior design, you could sell the rights of the design so anyone
+              who buys it can physically replicate it in the real world. Still,
+              you'll have proof of ownership / creation for your work.
+            </p>
+          </div>
+        </section>
+
         <!-- FEATURES SECTION -->
         <h3 class="text-white text-2xl font-bold py-4 text-shadow">
           Latest nebus in our collection
         </h3>
         <section id="nebu-menu" class="grid grid-cols-auto gap-8 py-10">
-          <!-- Replaced this with JS items -->
-          <!-- <article
-            class="flex flex-col mx-auto bg-purple-100 card-outline shadow-xl"
-          >
-            <figure class="mt-8 card-image-outline">
-              <img
-                src="./assets/images/nebutela.png"
-                alt="Canned ice cream with clear toppings and jelly"
-                class="mx-auto"
-              />
-            </figure>
-            <div class="flex flex-col sm:flex-row p-4">
-              <h4
-                class="
-                  flex-1
-                  mb-4
-                  sm:mb-0 sm:mr-4
-                  p-2
-                  text-2xl
-                  font-bold
-                  text-black
-                "
-              >
-                Nebutella
-              </h4>
-              <a
-                href="https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/47224765878096988103663174374940118264757069234415960059710050587615598477313/"
-                class="text-white link-button"
-                >Buy now</a
-              >
-            </div>
-          </article> -->
+          <!-- Cards injected with JS -->
         </section>
 
         <!-- NEBU HIME ABOUT SECTION -->
@@ -257,7 +262,7 @@
           class="flex flex-col sm:flex-row justify-between mx-auto pt-10"
         >
           <div class="md:w-1/2 md:self-center">
-            <h2
+            <h3
               class="
                 mb-8
                 text-4xl
@@ -268,8 +273,8 @@
               "
             >
               Hi! I'm Nebu Hime, creator of the Nebuniverse
-            </h2>
-            <p class="text-white">
+            </h3>
+            <p class="lg:text-2xl text-white">
               Where I create fantastic, galactically fluffy and delicious NEBUS
               that you can buy on my
               <a
