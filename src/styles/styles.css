@@ -13,11 +13,12 @@
 }
 
 :root {
-  --nebu-purple: rgba(122, 106, 200, 1);
-  --nebu-purple-darker: rgb(72, 62, 122);
-  --nebu-pink: rgba(228, 167, 235, 1);
-  --nebu-pink-darker: rgb(150, 110, 155);
-  --nebu-pink-darkest: rgb(46, 33, 48);
+  --nebu-purple: #b18fc1;
+  --nebu-purple-darker: #75478A;
+  --nebu-purple-darkest: #524359
+  --nebu-pink: #FCB0BF;
+  --nebu-rounded: #CF586F;
+  --nebu-gray: #F4F4F4;
 }
 
 * {
@@ -33,26 +34,24 @@ body {
 
 body {
   font-family: BPreplay, Helvetica, sans-serif;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 }
 
 footer {
-  background-color: var(--nebu-pink-darkest);
+  background-color: var(--nebu-purple-darkest);
 }
 
-.bg-gradient {
-  background: linear-gradient(
-    0deg,
-    var(--nebu-pink) 0%,
-    var(--nebu-purple) 100%
-  );
+.purple-bg {
+  background-color: var(--nebu-purple);
 }
 
-.bg-gradient-sm {
-  background: linear-gradient(
-    0deg,
-    var(--nebu-pink) 0%,
-    var(--nebu-purple) 100%
-  );
+.purple-bg-darkest {
+  background-color: var(--nebu-purple-darkest);
+}
+
+.pink-bg {
+  background-color: var(--nebu-pink);
 }
 
 .text-shadow {

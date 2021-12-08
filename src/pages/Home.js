@@ -3,44 +3,45 @@ import NebuCard from "../templates/NebuCard";
 
 const Home = () => {
   const view = /*vue-html*/ ` 
-    <div class="max-w-6xl mx-auto px-8 text-center sm:text-left">
+    <div class="text-center sm:text-left">
       <!-- HERO SECTION -->
       <section
-        class="hero flex flex-col sm:flex-row justify-between mx-auto py-10 bg-gray-400"
+        class="purple-bg px-10"
       >
-        <figure class="">
-          <img
-            src="./assets/images/nebu_hero.png"
-            alt="Big nebu image"
-            class="
-              w-96
-              sm:w-full
-              mx-auto
-              p-4
-              sm:p-10
-              md:px-20
-              transform-gpu
-              translate-x-5
-              sm:translate-x-0
-            "
-          />
-        </figure>
-        <div class="flex-grow-1 m-auto text-white text-shadow">
-          <h1 class="mb-8 text-4xl sm:text-6xl lg:text-8xl font-black">
-            NEBUS NFTs.
-          </h1>
-          <p class="mb-16 text-xl sm:text-2xl">
-            Crypto delicacies from outer space.
-          </p>
-          <a href="https://opensea.io/nebuniverse" class="link-button"
-            >Get yours at Open Sea!</a
-          >
+        <div class="max-w-6xl flex flex-col sm:flex-row justify-between mx-auto py-10">
+          <figure class="">
+            <img
+              src="./assets/images/nebu_hero.png"
+              alt="Big nebu image"
+              class="
+                w-64
+                sm:w-full
+                mx-auto
+                sm:p-10
+                md:px-20
+                transform-gpu
+                translate-x-5
+                sm:translate-x-0
+              "
+            />
+          </figure>
+          <div class="flex-grow-1 m-auto text-white text-shadow">
+            <h1 class="mt-8 sm:mt-0 mb-8 text-4xl sm:text-6xl lg:text-8xl font-black">
+              NEBUS NFTs.
+            </h1>
+            <p class="mb-16 text-xl sm:text-2xl">
+              Crypto delicacies from outer space.
+            </p>
+            <a href="https://opensea.io/nebuniverse" class="link-button"
+              >Get yours at Open Sea!</a
+            >
+          </div>
         </div>
       </section>
 
       <!-- WHAT IS AN NFT SECTION -->
 
-      <section class="hero flex flex-col justify-between mx-auto py-10">
+      <section class="hero flex flex-col justify-between mx-auto py-10 px-10">
         <h2
           class="
             mb-8
@@ -73,14 +74,13 @@ const Home = () => {
       </section>
 
       <!-- FEATURES SECTION -->
-      <h3 class="text-white text-2xl font-bold py-4 text-shadow">
-        Latest nebus in our collection
-      </h3>
-      <section id="nebu-menu" class="grid grid-cols-auto gap-8 py-10">
-        ${nebus.forEach((nebu) => {
-          const newNebu = NebuCard(nebu);
-          return newNebu;
-        })}
+      <section class="pink-bg">
+        <h3 class="text-white text-2xl font-bold py-4 text-shadow">
+          Latest nebus in our collection
+        </h3>
+        <div class="w-full grid grid-cols-auto gap-8 px-20">
+          ${nebus.map((nebu) => NebuCard(nebu)).join("")} 
+        </div>
       </section>
 
       <!-- NEBU HIME ABOUT SECTION -->

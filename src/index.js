@@ -2,6 +2,7 @@ import "./styles/styles.css";
 import router from "./routes";
 
 window.addEventListener("load", router);
+window.addEventListener("hashchange", router);
 // //event listeners and DOM selectors
 // // closed menu icon
 // const $hamMenu = document.querySelector("#menu-icon");

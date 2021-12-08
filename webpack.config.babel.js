@@ -37,11 +37,6 @@ export default () => {
         filename: "index.html",
         template: resolve(__dirname, "./public/index.html"),
       }),
-      new HTMLWebpackPlugin({
-        inject: true,
-        filename: "about.html",
-        template: resolve(__dirname, "./public/about.html"),
-      }),
       new MiniCssExtractPlugin({
         filename: "style.css",
       }),
