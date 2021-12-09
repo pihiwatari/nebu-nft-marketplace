@@ -1,3 +1,14 @@
+const links = [
+  {
+    destination: "Home",
+    href: "/",
+  },
+  {
+    destination: "About",
+    href: "/about",
+  },
+];
+
 const Header = () => {
   const view = /*vue-html*/ `
     <div
@@ -6,7 +17,7 @@ const Header = () => {
         justify-between
         items-center
         h-16
-        purple-bg
+        bg-nebu-purple
       "
     >
       <!-- logo image -->
@@ -17,9 +28,12 @@ const Header = () => {
           class="h-full p-2 sm:p-4"
         />
       </a>
-      <nav>
-        <ul class="">
-          <li>
+      <nav class="">
+        <ul class="flex flex-col sm:flex-row sm:justify-between text-nebu-purple-darkest font-bold">
+          <li class="mx-4">
+            <a href="#/" class="">Home</a>
+          </li>
+          <li class="mx-4">
             <a href="#/about" class="">About</a>
           </li>
         </ul>

@@ -14,6 +14,26 @@ module.exports = {
         "screen-50": "50vh",
         "screen-80": "80vh",
       },
+      colors: {
+        nebu: {
+          purple: {
+            DEFAULT: "#b18fc1",
+            darker: "#75478a",
+            darkest: "#524359",
+          },
+          pink: {
+            DEFAULT: "#fcb0bf",
+            darker: "#7C3342",
+          },
+          red: {
+            DEFAULT: "#cf586f",
+            darker: "#B0203C",
+          },
+          gray: {
+            DEFAULT: "#f4f4f4",
+          },
+        },
+      },
     },
   },
   variants: {

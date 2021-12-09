@@ -1,8 +1,8 @@
 //card html template
 const NebuCard = (nebu) => {
-  const template = `
-    <article class="flex flex-col mx-auto bg-purple-100 shadow-xl card-outline">
-      <figure class="mt-8 card-image-outline">
+  const template = /*vue-html*/ `
+    <article class="flex flex-col mx-auto bg-white shadow-xl card-outline border-black">
+      <figure class="mt-8">
       <img
         src="${nebu.imageUrl}"
         alt="${nebu.alt}"
@@ -10,12 +10,11 @@ const NebuCard = (nebu) => {
         width="300px"
       />
       </figure>
-      <div class="flex flex-col sm:flex-row p-4">
+      <div class="flex flex-col p-4 text-center">
         <h4
           class="
             flex-1
             mb-4
-            sm:mb-0 sm:mr-4
             p-2
             text-2xl
             font-bold
@@ -24,11 +23,9 @@ const NebuCard = (nebu) => {
         >
           ${nebu.name}
         </h4>
-        <a
-          href="${nebu.address}"
-          class="text-white link-button"
-          >Buy now</a
-        >
+        <a href="${nebu.address}"class="text-white link-button bg-nebu-red hover:bg-nebu-red-darker">
+            Buy now
+        </a>
       </div>
     </article>
   `;
