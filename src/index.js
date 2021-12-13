@@ -3,29 +3,11 @@ import router from "./routes";
 
 window.addEventListener("load", router);
 window.addEventListener("hashchange", router);
-// //event listeners and DOM selectors
-// // closed menu icon
-// const $hamMenu = document.querySelector("#menu-icon");
 
-// //mobile nav menu
-// const $closemobileMenuIcon = document.querySelector("#close-menu");
-// const $navigation = document.querySelector("#navigation");
-
-// //feature section selector
-// const $featureSection = document.getElementById("nebu-menu");
-
-// //get the nebus object, create a new card and append to the container
-
-// // nebus.forEach((item) => {
-// //   const newNebu = NebuCard(item);
-// //   $featureSection.appendChild(newNebu);
-// // });
-
-// //close open menu listeners
-
-// $hamMenu.addEventListener("click", () => {
-//   $navigation.classList.toggle("hidden");
-// });
-// $closemobileMenuIcon.addEventListener("click", () => {
-//   $navigation.classList.toggle("hidden");
-// });
+//Event listener for mobile nav menu
+document.addEventListener("click", function (event) {
+  if (event.target && event.target.id == "open-menu") {
+    const nav = document.querySelector("#link-list");
+    nav.classList.toggle("hidden");
+  }
+});

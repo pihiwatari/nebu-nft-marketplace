@@ -29,6 +29,19 @@ body {
   grid-template-rows: auto 1fr auto;
 }
 
+.header__menu-btn {
+  @apply block sm:hidden border-0 bg-none cursor-pointer p-0 w-8;
+}
+
+.header__menu-btn::after,
+.header__menu-btn::before {
+  @apply bg-nebu-purple-darkest;
+  content: "";
+  display: block;
+  height: 4px;
+  width: 100%;
+}
+
 .link-button {
   @apply transform-gpu transition-all inline-block my-auto p-4 rounded-lg font-bold hover:scale-105;
 }

@@ -1,45 +1,34 @@
-const links = [
-  {
-    destination: "Home",
-    href: "/",
-  },
-  {
-    destination: "About",
-    href: "/about",
-  },
-];
+import nebuLogo from "../styles/images/nebu_logo.png";
 
-const Header = () => {
-  const view = /*vue-html*/ `
-    <div
-      class="
-        flex
-        justify-between
-        items-center
-        h-16
-        bg-nebu-purple
-      "
+const Header = function () {
+  const view = /*html*/ `
+    <nav
+      class="flex justify-between items-center flex-wrap sm:flex-nowrap h-auto p-4 font-bold bg-nebu-purple text-nebu-purple-darkest"
     >
-      <!-- logo image -->
-      <a href="#" class="inline-block h-full">
-        <img
-          src="./assets/images/nebu_logo.png"
-          alt="Nebu logo"
-          class="h-full p-2 sm:p-4"
-        />
+      <a href="#/" class="block h-full">
+        <img src="${nebuLogo}" alt="Nebu logo" class="w-32" />
       </a>
-      <nav class="">
-        <ul class="flex flex-col sm:flex-row sm:justify-between text-nebu-purple-darkest font-bold">
-          <li class="mx-4">
-            <a href="#/" class="">Home</a>
-          </li>
-          <li class="mx-4">
-            <a href="#/about" class="">About</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
+      <button class="
+        p-1 header__menu-btn
+        " 
+        id="open-menu">
+        <div class="
+          bg-nebu-purple-darkest h-1 mx-0 my-1"></div>
+      </button>
+      <ul class="hidden sm:flex flex-col sm:flex-row align-center flex-grow-1 sm:flex-grow-0 w-full sm:w-auto" id="link-list">
+        <li class="w-min mx-auto mt-2 sm:mt-0 sm:px-2">
+          <a href="#/">Home</a>
+        </li>
+        <li class="w-min mx-auto mt-2 sm:mt-0 sm:px-2">
+          <a href="#/about">About</a>
+        </li>
+        <li class="w-min mx-auto mt-2 sm:mt-0 sm:px-2">
+          <a href="#/gallery">Gallery</a>
+        </li>
+      </ul>
+    </nav>
   `;
+
   return view;
 };
 
