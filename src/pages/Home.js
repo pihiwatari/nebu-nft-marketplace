@@ -1,8 +1,9 @@
-import nebus from "../utils/nebus";
+import getNebus from "../utils/getNebus";
 import NebuCard from "../templates/NebuCard";
 
-const Home = () => {
-  const view = /*vue-html*/ ` 
+const Home = async () => {
+  const nebus = await getNebus();
+  const view = /*html*/ ` 
     <div class="text-center sm:text-left">
       <!-- HERO SECTION -->
       <section
@@ -32,7 +33,7 @@ const Home = () => {
             <p class="mb-16 text-2xl">
               Crypto delicacies from outer space.
             </p>
-            <a href="https://opensea.io/nebuniverse" class="link-button text-xl  bg-nebu-purple-darker hover:bg-nebu-red"
+            <a href="https://opensea.io/nebuniverse" class="link-button text-xl  bg-nebu-purple-darkest hover:bg-nebu-red"
               >Get yours at Open Sea!</a
             >
           </div>

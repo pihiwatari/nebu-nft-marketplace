@@ -15,15 +15,42 @@ const Header = function () {
         <div class="
           bg-nebu-purple-darkest h-1 mx-0 my-1"></div>
       </button>
-      <ul class="hidden sm:flex flex-col sm:flex-row align-center flex-grow-1 sm:flex-grow-0 w-full sm:w-auto" id="link-list">
-        <li class="w-min mx-auto mt-2 sm:mt-0 sm:px-2">
-          <a href="#/">Home</a>
+      <ul class="
+        hidden flex-col align-center flex-grow-1 w-full text-center
+        sm:flex sm:flex-row sm:flex-grow-0 sm:w-auto
+        transform-gpu
+        transition-all
+        " 
+        id="link-list">
+        <li class="text-center">
+          <a href="#/" 
+            id="#/"
+            class="
+            inline-block w-min mx-auto mt-2 rounded-md px-4 py-2
+            sm:mt-0
+            transition-all
+            hover:text-white hover:bg-nebu-purple-darkest hover:scale-110
+            ">Home</a>
         </li>
-        <li class="w-min mx-auto mt-2 sm:mt-0 sm:px-2">
-          <a href="#/about">About</a>
+        <li>
+          <a href="#/about"
+            id="#/about" 
+            class="
+            inline-block w-min mx-auto mt-2 rounded-md px-4 py-2
+            sm:mt-0
+            transition-all
+            hover:text-white hover:bg-nebu-purple-darkest hover:scale-110
+            ">About</a>
         </li>
-        <li class="w-min mx-auto mt-2 sm:mt-0 sm:px-2">
-          <a href="#/gallery">Gallery</a>
+        <li>
+          <a href="#/gallery" 
+            id="#/gallery"
+            class="
+            inline-block w-min mx-auto mt-2 rounded-md px-4 py-2
+            sm:mt-0
+            transition-all
+            hover:text-white hover:bg-nebu-purple-darkest hover:scale-110
+            ">Gallery</a>
         </li>
       </ul>
     </nav>
