@@ -10,6 +10,7 @@ module.exports = {
       gridTemplateColumns: {
         //grid auto fill columns
         auto: "repeat(auto-fit, minmax(280px, 1fr))",
+        "auto-small": "repeat(auto-fit, minmax(150px, 1fr))",
       },
       height: {
         "screen-50": "50vh",
@@ -34,6 +35,9 @@ module.exports = {
             DEFAULT: "#f4f4f4",
           },
         },
+      },
+      backgroundImage: {
+        "choco-planet": "url(/src/styles/images/Choco-planet.png)",
       },
     },
   },

@@ -1,5 +1,8 @@
 import getHash from "../utils/getHash";
 import getNebus from "../utils/getNebus";
+import capitalize from "../utils/capitalize";
+import StatsContainer from "../templates/StatsContainer";
+import "../styles/styles.css";
 
 const NebuItem = async () => {
   /*
@@ -31,51 +34,76 @@ const NebuItem = async () => {
     return !statsArray.includes(trait.trait_type);
   });
 
-  const view = /*html */ `
+  const view =
+    /*html*/
+    `
 
     <!-- Page container -->
-    <section class="max-w-6xl py-8 px-10 bg-nebu-gray">
+    <section class="flex flex-col align-center py-8 px-10 bg-nebu-gray">
 
-      <!-- main container -->
-      <div class="flex flex-col p-4 rounded-2xl bg-nebu-purple text-white">
+      <!-- Return to gallery button -->
+      <a class="
+        w-full mx-auto mb-4 text-center text-white bg-nebu-red 
+        hover:bg-nebu-red-darker
+        sm:w-48 
+        link-button" 
+        href="#/gallery">Return to Gallery</a>
 
-        <!-- top container for images and nebu's name -->
-        <div class="flex flex-col w-full items-center">
-          <img src="${nebu.image_preview_url}" alt="${nebu.name}" 
-            class="w-3/4 m-4 rounded-2xl">
-          <div class="text-center sm:text-left">
-            <h1 class="text-4xl font-bold">${nebu.name}</h1>
-            <p class="mt-2 text-2xl font-thin">Astro: ${nebula}</p>
+      <!-- Background container -->
+      <div class="w-full mx-auto rounded-2xl bg-choco-planet bg-cover bg-center overflow-hidden">
+
+        <!-- Main content container -->
+
+        <div class="
+          flex flex-wrap 
+          p-4 w-full h-full 
+          text-white 
+          bg-gradient-to-tl from-nebu-purple-darkest to-transparent 
+          bg-opacity-100
+          ">
+          <!-- top container for images and nebu's name -->
+          <div class="
+            flex flex-col flex-grow w-full items-center
+            sm:flex-row
+            ">
+            <img src="${nebu.image_preview_url}" alt="${nebu.name}" 
+              class="
+                w-3/4 m-4 rounded-2xl
+                sm:w-48
+              ">
+            <div class="text-center sm:text-left">
+              <h1 class="text-4xl font-bold">${nebu.name}</h1>
+              <p class="mt-2 text-2xl font-thin">Astro: ${nebula}</p>
+            </div>
+          </div>
+
+          <!-- Middle container for stats -->
+          <div class="flex-1 mx-auto p-4 text-center sm:text-left">
+            <h4 class="text-lg mb-3">Stats</h4>
+            
+            <!-- StatsContainer component -->
+            ${stats.map(stat => StatsContainer(stat)).join("")}
+          </div>
+
+          <!-- Bottom container for traits -->
+          <div class="flex-grow p-4">
+            <p class="mb-4"><strong>Traits: </strong></p>
+
+            <!-- Trait grid container -->
+            <div class="w-full grid grid-cols-auto-small grid-flow-row gap-4">
+              ${traits
+                .map((trait) => {
+                  return /*html*/ `
+                    <div class="p-2 text-center rounded-lg bg-white bg-opacity-20">
+                      <strong>${capitalize(trait.trait_type)}</strong>
+                      <p>${capitalize(trait.value)}</p>
+                    </div>
+                  `;
+                })
+                .join("")}
+            </div>
           </div>
         </div>
-
-        <!-- Middle container for stats -->
-        <div class="my-4 text-center">
-          <h4 class="text-lg mb-3">Stats</h4>
-          
-          <!-- Stat container -->
-          ${stats
-            .map((stat) => {
-              return /*html*/ `
-                  <div class="my-4">
-                    <span class="font-bold">${stat.trait_type}: </span>
-                    <span class="font-thin">${stat.value} / 10</span>
-                    <div class="flex w-full mt-1" >
-                      <div class="w-8 h-1.5 bg-white"></div>
-                    </div>
-                  </div>
-                `;
-            })
-            .join("")}
-        </div>
-
-        <!-- Bottom container for traits -->
-        ${traits.map((trait) => {
-          return /*html*/ `
-            
-          `;
-        })}
-
       </div>
     </section>
   `;
