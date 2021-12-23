@@ -1,8 +1,7 @@
-import getNebus from "../utils/getNebus";
-import NebuCard from "../templates/NebuCard";
+import Gallery from "../utils/galleryGrid";
 
 const Home = async () => {
-  const nebus = await getNebus();
+  const gallery = await Gallery();
   const view = /*html*/ ` 
     <div class="text-center sm:text-left">
       <!-- HERO SECTION -->
@@ -81,9 +80,7 @@ const Home = async () => {
           <h3 class="pb-10 text-4xl font-bold text-nebu-pink-darker">
             Latest nebus in our collection
           </h3>
-          <div class="w-full grid grid-cols-auto gap-8 px-4">
-            ${nebus.map((nebu) => NebuCard(nebu)).join("")} 
-          </div>
+          ${gallery}
         </div>
       </section>
 
