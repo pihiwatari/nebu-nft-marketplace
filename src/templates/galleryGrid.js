@@ -1,5 +1,5 @@
-import getNebus from "./getNebus";
-import NebuCard from "../templates/NebuCard";
+import getNebus from "../utils/getNebus";
+import NebuCard from "./NebuCard";
 
 const GalleryGrid = async () => {
   const nebus = await getNebus();

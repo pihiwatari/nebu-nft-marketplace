@@ -1,12 +1,14 @@
-import GalleryGrid from "../utils/galleryGrid";
+import GalleryGrid from "../templates/galleryGrid";
 
 const Gallery = async () => {
-    const gallery = await Gallery();
-    const view = `
-    <div class='max-w-6xl p-8'>${gallery}</div>
+  const gallery = await GalleryGrid();
+  const view =
+    /*html*/
     `
+    <div class='max-w-6xl p-8 mx-auto'>${gallery}</div>
+    `;
 
-    return view
-}
+  return view;
+};
 
-export default Gallery
+export default Gallery;

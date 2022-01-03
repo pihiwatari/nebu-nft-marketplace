@@ -1,4 +1,4 @@
-import GalleryGrid from "../utils/galleryGrid";
+import GalleryGrid from "../templates/galleryGrid";
 
 const Home = async () => {
   const gallery = await GalleryGrid();
