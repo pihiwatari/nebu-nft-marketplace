@@ -1,7 +1,7 @@
-import Gallery from "../utils/galleryGrid";
+import GalleryGrid from "../utils/galleryGrid";
 
 const Home = async () => {
-  const gallery = await Gallery();
+  const gallery = await GalleryGrid();
   const view = /*html*/ ` 
     <div class="text-center sm:text-left">
       <!-- HERO SECTION -->

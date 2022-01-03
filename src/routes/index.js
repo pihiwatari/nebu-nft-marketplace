@@ -4,14 +4,14 @@ import NebuItem from "../pages/NebuItem";
 import Home from "../pages/Home";
 import About from "../pages/About";
 import Error404 from "../pages/Error404";
-import Gallery from "../utils/galleryGrid";
+import Gallery from "../pages/Gallery";
 import getHash from "../utils/getHash";
 import resolveRoutes from "../utils/resolveRoutes";
 
 const routes = {
   "/": Home,
   "/about": About,
-  "/gallery": async () => `<div class='max-w-6xl p-8'>${await Gallery()}</div>`,
+  "/gallery": Gallery,
   "/:id": NebuItem,
 };
 

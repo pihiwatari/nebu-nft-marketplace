@@ -1,10 +1,10 @@
 import getNebus from "./getNebus";
 import NebuCard from "../templates/NebuCard";
 
-const Gallery = async () => {
+const GalleryGrid = async () => {
   const nebus = await getNebus();
   const template = /*html*/ `
-      <div class="w-full grid grid-cols-auto gap-8 px-4">
+      <div class="w-full grid grid-cols-auto gap-8 mx-auto px-4">
         ${nebus.map((nebu) => NebuCard(nebu)).join("")} 
       </div>
   `;
@@ -12,4 +12,4 @@ const Gallery = async () => {
   return template;
 };
 
-export default Gallery;
+export default GalleryGrid;
